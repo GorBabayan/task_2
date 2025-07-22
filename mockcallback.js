@@ -12,8 +12,9 @@ function addUser(user, callback) {
         let newUser = { id: generateId(), ...user };
         users.push(newUser);
         callback(newUser);
-    }, 400);
+    }, 500);
 }
+
 
 function deleteUser(id, callback) {
     setTimeout(() => {
@@ -25,7 +26,7 @@ function deleteUser(id, callback) {
 
         users = users.filter(user => user.id != id);
         callback(null, users);
-    }, 400);
+    }, 500);
 }
 
 function updateUser(id, updates, callback) {
@@ -38,7 +39,7 @@ function updateUser(id, updates, callback) {
 
         users[index] = { ...users[index], ...updates };
         callback(users[index]);
-    }, 400);
+    }, 500);
 }
 
 addUser({ name: "Armen" }, (user) => {
