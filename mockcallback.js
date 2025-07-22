@@ -1,5 +1,3 @@
-// callback only setTimeout
-
 let users = [
     { id: 1, name: "Gor" },
     { id: 2, name: "Vardan" }
@@ -14,7 +12,7 @@ function addUser(user, callback) {
         let newUser = { id: generateId(), ...user };
         users.push(newUser);
         callback(newUser);
-    }, 500);
+    }, 400);
 }
 
 function deleteUser(id, callback) {
@@ -27,7 +25,7 @@ function deleteUser(id, callback) {
 
         users = users.filter(user => user.id != id);
         callback(null, users);
-    }, 500);
+    }, 400);
 }
 
 function updateUser(id, updates, callback) {
@@ -40,7 +38,7 @@ function updateUser(id, updates, callback) {
 
         users[index] = { ...users[index], ...updates };
         callback(users[index]);
-    }, 500);
+    }, 400);
 }
 
 addUser({ name: "Armen" }, (user) => {

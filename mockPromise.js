@@ -11,7 +11,7 @@ function getUsers() {
     return new Promise (resolve => {
         setTimeout(() => {
             resolve([...users]);
-        }, 500);
+        }, 400);
     });
 }
 
@@ -21,7 +21,7 @@ function addUser(user) {
             let newUser = { id: generateId(), ...user };
             users.push(newUser);
             resolve(newUser);
-        }, 500);
+        }, 400);
     });
 }
 
@@ -35,7 +35,7 @@ function deleteUser(id) {
 
             users = users.filter(user => user.id != id);
             resolve(users);
-        }, 500);
+        }, 400);
     });
 }
 
@@ -49,7 +49,7 @@ function updateUser(id, updatedMaterial) {
 
             users[index] = { ...users[index], ...updatedMaterial };
             resolve(users[index]);
-        }, 500);
+        }, 400);
     });
 }
 
