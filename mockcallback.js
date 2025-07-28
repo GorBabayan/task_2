@@ -1,5 +1,3 @@
-// callback only setTimeout
-
 let users = [
     { id: 1, name: "Gor" },
     { id: 2, name: "Vardan" }
@@ -16,6 +14,7 @@ function addUser(user, callback) {
         callback(newUser);
     }, 500);
 }
+
 
 function deleteUser(id, callback) {
     setTimeout(() => {
